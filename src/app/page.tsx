@@ -9,11 +9,17 @@ export default function Home() {
           Welcome to Technovista, the annual fest of Sri Sairam College of Engineering! Join us for a celebration of innovation, creativity, and technology with exciting events, workshops, and more.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
-          <a href="#register" className="flex-1 px-6 py-3 rounded-lg bg-indigo-600 text-white font-semibold shadow hover:bg-indigo-700 transition text-lg">Register</a>
-          <a href="#events" className="flex-1 px-6 py-3 rounded-lg bg-white text-indigo-700 font-semibold border border-indigo-600 shadow hover:bg-indigo-50 transition text-lg">Events</a>
+          <a href="/register" className="flex-1 px-6 py-3 rounded-lg bg-indigo-600 text-white font-semibold shadow hover:bg-indigo-700 transition text-lg">Register</a>
+          <a href="/events" className="flex-1 px-6 py-3 rounded-lg bg-white text-indigo-700 font-semibold border border-indigo-600 shadow hover:bg-indigo-50 transition text-lg">Events</a>
           <a href="#knowmore" className="flex-1 px-6 py-3 rounded-lg bg-gray-200 text-indigo-800 font-semibold shadow hover:bg-gray-300 transition text-lg">Know More</a>
         </div>
       </main>
+      <div id="knowmore" className="mt-16 max-w-2xl text-center text-gray-700 text-base sm:text-lg">
+        <h3 className="text-xl font-bold text-indigo-700 mb-2">Know More</h3>
+        <p>
+          Technovista is the flagship fest of Sri Sairam College of Engineering, bringing together students from various disciplines to showcase their talents in both technical and non-technical events. Dive into a world of innovation, creativity, and fun!
+        </p>
+      </div>
       <footer className="mt-12 text-gray-500 text-sm">&copy; 2025 Technovista | Sri Sairam College of Engineering</footer>
     </div>
   );
