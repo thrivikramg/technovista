@@ -199,9 +199,9 @@ export default function Home() {
         {/* Enhanced Stats Section with Count-up Animation */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-16 w-full max-w-5xl">
           {[
-            { number: "50+", label: "Innovative Events", color: "from-blue-400 to-cyan-400", delay: "0ms" },
-            { number: "1000+", label: "Tech Enthusiasts", color: "from-purple-400 to-pink-400", delay: "100ms" },
-            { number: "3", label: "Inspiring Days", color: "from-cyan-400 to-blue-400", delay: "200ms" },
+            { number: "6+", label: "Innovative Events", color: "from-blue-400 to-cyan-400", delay: "0ms" },
+            { number: "500+", label: "Tech Enthusiasts", color: "from-purple-400 to-pink-400", delay: "100ms" },
+            { number: "24", label: "Inspiring hrs", color: "from-cyan-400 to-blue-400", delay: "200ms" },
             { number: "2025", label: "Grand Edition", color: "from-green-400 to-cyan-400", delay: "300ms" }
           ].map((stat, index) => (
             <div 
