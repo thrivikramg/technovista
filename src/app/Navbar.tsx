@@ -9,7 +9,6 @@ export default function Navbar() {
     { href: "/", label: "Home", icon: "🏠" },
     { href: "/register", label: "Register", icon: "📝" },
     { href: "/events", label: "Events", icon: "🎯" },
-    { href: "#about", label: "About", icon: "ℹ️" },
   ];
 
   // ✅ Scroll detection (safe for SSR)
@@ -87,18 +86,11 @@ export default function Navbar() {
               <div className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full group-hover:w-8 transition-all duration-300 transform -translate-x-1/2"></div>
             </a>
           ))}
-
-          <a
-            href="/register"
-            className="ml-4 px-6 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 hover:from-blue-500 hover:to-purple-500 border border-blue-400/30"
-          >
-            Join Now
-          </a>
         </div>
 
         {/* Mobile Button */}
         <button
-          className="lg:hidden flex flex-col justify-center items-center w-12 h-12 rounded-2xl bg-gray-800/50 border border-gray-700/50 hover:border-cyan-400/30 transition-all duration-300 group"
+          className={`lg:hidden flex flex-col justify-center items-center w-12 h-12 rounded-2xl border border-gray-700/50 hover:border-cyan-400/30 transition-all duration-300 group ${open ? 'bg-cyan-900/90' : 'bg-gray-800/50'}`}
           aria-label="Toggle navigation menu"
           onClick={() => setOpen((v) => !v)}
         >
@@ -133,7 +125,7 @@ export default function Navbar() {
           onClick={() => setOpen(false)}
         />
         <div
-          className={`absolute top-0 right-0 h-full w-80 max-w-full bg-gradient-to-b from-gray-900 to-gray-950 border-l border-gray-700/50 shadow-2xl transform transition-transform duration-500 ${
+          className={`absolute top-0 right-0 h-full w-screen bg-gray-950 border-l border-gray-700/50 shadow-2xl transform transition-transform duration-500 ${
             open ? "translate-x-0" : "translate-x-full"
           }`}
         >
@@ -141,7 +133,6 @@ export default function Navbar() {
             <div className="text-2xl font-black bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
               TECHNO<span className="text-purple-400">VISTA</span>
             </div>
-            <div className="text-sm text-gray-400 mt-1">Navigation Menu</div>
           </div>
 
           <div className="p-6 space-y-3">
