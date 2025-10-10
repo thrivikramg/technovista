@@ -25,6 +25,7 @@ export default function Home() {
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden p-4 bg-gray-950">
       {/* Enhanced Aurora Background */}
+      
       <div className="absolute inset-0 z-0">
         <Aurora
           colorStops={["#3A29FF", "#FF94B4", "#FF3232"]}
@@ -32,6 +33,7 @@ export default function Home() {
           amplitude={2.0}
           speed={0.5}
         />
+        
         {/* Gradient Overlay for better text readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-gray-950/40 via-gray-950/60 to-gray-950/80"></div>
         {/* Animated Grid Overlay */}
@@ -42,7 +44,6 @@ export default function Home() {
 
       {/* Navbar */}
       <Navbar />
-
       {/* Main Content */}
       <main 
         className={`relative z-10 flex flex-col items-center justify-center flex-1 w-full text-center gap-12 max-w-6xl pt-24 transition-all duration-1000 ${
@@ -235,6 +236,7 @@ export default function Home() {
             { name: 'Hackathons', icon: '💻' },
             { name: 'Exhibitions', icon: '🎪' },
             { name: 'Seminars', icon: '🎤' },
+
             { name: 'Competitions', icon: '⚡' }
           ].map((link, index) => (
             <a
