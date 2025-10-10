@@ -92,98 +92,39 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Unique Mobile Navbar - Floating Round Button */}
-      <div className="lg:hidden fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50">
-        {/* Backdrop when open */}
-        {open && (
-          <div 
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
-            onClick={() => setOpen(false)}
-          />
-        )}
+      {/* Mobile Navbar - Slide-down Fullscreen Menu */}
+      <div className="lg:hidden">
+        {/* Hamburger Button */}
+        <button
+          className="fixed top-4 right-4 z-50 w-12 h-12 flex flex-col items-center justify-center rounded-full bg-gradient-to-br from-blue-600 to-purple-600 shadow-lg border-2 border-white/20 focus:outline-none"
+          onClick={() => setOpen(!open)}
+          aria-label="Toggle navigation menu"
+        >
+          <span className={`block w-7 h-1 bg-white rounded transition-all duration-300 ${open ? 'rotate-45 translate-y-2' : ''}`}></span>
+          <span className={`block w-7 h-1 bg-white rounded my-1 transition-all duration-300 ${open ? 'opacity-0' : ''}`}></span>
+          <span className={`block w-7 h-1 bg-white rounded transition-all duration-300 ${open ? '-rotate-45 -translate-y-2' : ''}`}></span>
+        </button>
 
-        {/* Circular Navigation Container */}
-        <div className="relative">
-          {/* Expanded Links - Appear around the circle */}
-          {open && (
-            <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 flex flex-col items-center space-y-3 mb-4">
-              {navLinks.map((link, index) => {
-                const angle = (index * 120 - 60) * (Math.PI / 180);
-                const radius = 80;
-                const x = Math.cos(angle) * radius;
-                const y = Math.sin(angle) * radius;
-
-                return (
-                  <a
-                    key={link.href}
-                    href={link.href}
-                    className={`absolute flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 text-white shadow-2xl border border-white/20 transform transition-all duration-500 hover:scale-110 z-50 ${
-                      open ? 'animate-float' : ''
-                    }`}
-                    style={{
-                      transform: `translate(${x}px, ${y}px) scale(${open ? 1 : 0})`,
-                      transitionDelay: `${index * 100}ms`,
-                    }}
-                    onClick={() => setOpen(false)}
-                  >
-                    <span className="text-lg">{link.icon}</span>
-                    {/* Tooltip */}
-                    <div className="absolute -top-8 bg-gray-900 text-white text-xs px-2 py-1 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 border border-gray-700">
-                      {link.label}
-                    </div>
-                  </a>
-                );
-              })}
-            </div>
-          )}
-
-          {/* Main Round Button */}
-          <button
-            className={`relative w-16 h-16 rounded-full shadow-2xl border-2 border-white/20 flex items-center justify-center transition-all duration-500 z-50 ${
-              open
-                ? "bg-gradient-to-br from-cyan-500 to-blue-600 rotate-180 scale-110"
-                : "bg-gradient-to-br from-blue-600 to-purple-600 hover:scale-105"
-            }`}
-            onClick={() => setOpen(!open)}
-            aria-label="Toggle navigation menu"
-          >
-            {/* Animated Icon */}
-            <div className="relative w-6 h-6">
-              <span
-                className={`absolute top-0 left-0 w-6 h-0.5 bg-white transition-all duration-300 ${
-                  open ? "rotate-45 translate-y-3" : "translate-y-1"
-                }`}
-              ></span>
-              <span
-                className={`absolute top-0 left-0 w-6 h-0.5 bg-white transition-all duration-300 ${
-                  open ? "opacity-0" : "translate-y-3"
-                }`}
-              ></span>
-              <span
-                className={`absolute top-0 left-0 w-6 h-0.5 bg-white transition-all duration-300 ${
-                  open ? "-rotate-45 translate-y-3" : "translate-y-5"
-                }`}
-              ></span>
-            </div>
-
-            {/* Glow Effect */}
-            <div
-              className={`absolute inset-0 rounded-full bg-cyan-400 blur-md transition-all duration-500 ${
-                open ? "opacity-50 animate-pulse" : "opacity-0"
-              }`}
-            ></div>
-          </button>
-
-          {/* Register Button - Appears below when open */}
-          {open && (
+        {/* Fullscreen Slide-down Menu */}
+        <div className={`fixed inset-0 z-40 bg-gray-950/95 backdrop-blur-xl flex flex-col items-center justify-center transition-all duration-500 ${open ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0 pointer-events-none'}`}>
+          {navLinks.map((link, index) => (
             <a
-              href="/register"
-              className="absolute -bottom-20 left-1/2 transform -translate-x-1/2 px-6 py-3 bg-gradient-to-r from-green-500 to-cyan-500 text-white font-bold rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 border border-white/20 whitespace-nowrap z-50 animate-bounce-slow"
+              key={link.href}
+              href={link.href}
+              className="w-64 my-4 py-4 text-2xl font-bold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl shadow-lg text-center border border-blue-400/30 hover:scale-105 transition-all duration-300"
               onClick={() => setOpen(false)}
             >
-              🚀 Register
+              <span className="mr-3">{link.icon}</span>
+              {link.label}
             </a>
-          )}
+          ))}
+          <a
+            href="/register"
+            className="w-64 my-4 py-4 text-2xl font-bold text-white bg-gradient-to-r from-green-500 to-cyan-500 rounded-2xl shadow-lg text-center border border-green-400/30 hover:scale-105 transition-all duration-300"
+            onClick={() => setOpen(false)}
+          >
+            🚀 Register
+          </a>
         </div>
       </div>
 
