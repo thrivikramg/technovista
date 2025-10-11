@@ -36,12 +36,19 @@ export default function Events() {
         level: "Intermediate",
         features: ["Research Presentation", "Technical Papers", "Q&A Session"],
         rules: [
+          "Should be Recent trends, emerging technologies, or original research ",
           "Team size: 2-4 members",
           "Original research or innovative ideas",
           "IEEE format (1500-2000 words)",
           "8-10 minute presentation + 2 min Q&A",
           "Plagiarism-free submissions",
           "Judges' decision is final"
+        ],
+        // 🌟 Added Co-ordinators from the image for Paper Presentation
+        coordinators: [
+          { name: "Sanjana S", role: "Main Coordinator" },
+          { name: "Rushikesh", role: "Coordinator" }
+          
         ]
       },
       {
@@ -62,6 +69,11 @@ export default function Events() {
           "No external communication",
           "Strict time limits",
           "Points for speed and accuracy"
+        ],
+        // 🌟 Added Co-ordinators from the image for Debugging
+        coordinators: [
+          { name: "Janani B", role: "Coordinator" },
+          { name: "Srinivas", role: "Coordinator" }
         ]
       },
       {
@@ -82,18 +94,23 @@ export default function Events() {
           "30 seconds per question",
           "No external resources",
           "Judges' decision final"
+        ],
+        // 🌟 Added Co-ordinators from the image for Technical Quiz
+        coordinators: [
+          { name: "Madhumitha P", role: "Coordinator" },
+          { name: "Deepa", role: "Coordinator" }
         ]
       },
       {
         id: 4,
-        name: "CodeQuest",
+        name: "TechHunt",
         tagline: "CTF Challenge",
         description: "Embark on a technical treasure hunt solving coding, cryptography, and cybersecurity challenges to find hidden flags.",
         icon: "🔍",
         color: "#F59E0B",
         gradient: "linear-gradient(135deg, #F59E0B 0%, #DC2626 100%)",
         participants: "2-3",
-        duration: "2 hours",
+        duration: "180 min",
         level: "Advanced",
         features: ["Multiple Levels", "Flag Hunting", "Real-world Scenarios"],
         rules: [
@@ -102,6 +119,11 @@ export default function Events() {
           "Find hidden flags",
           "No external help",
           "Points based on completion time"
+        ],
+        // 🌟 Added Co-ordinators from the image for Technical Hunt
+        coordinators: [
+          { name: "Thrivikram", role: "Coordinator" },
+          { name: "Afnan", role: "Coordinator" }
         ]
       }
     ],
@@ -124,6 +146,11 @@ export default function Events() {
           "Original content only",
           "Theme provided on spot",
           "Bring own materials"
+        ],
+        // 🌟 Added Co-ordinators from the image for Poster & Video Making
+        coordinators: [
+          { name: "Gnana Deepak J", role: "Main Coordinator" },
+          { name: "Tejas", role: "Coordinator" }
         ]
       },
       {
@@ -144,6 +171,10 @@ export default function Events() {
           "Knockout format",
           "Schedule adherence",
           "No cheating allowed"
+        ],
+        // 🌟 Placeholder for an event with no coordinators listed in the image
+        coordinators: [
+          { name: "Charan Teja", role: "Coordinator" } 
         ]
       }
     ]
@@ -372,6 +403,24 @@ export default function Events() {
                   <div className="text-sm text-gray-400">Difficulty</div>
                 </div>
               </div>
+              
+              {/* 🌟 New Section: Co-ordinators */}
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-4">Event Co-ordinators 🤝</h3>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                  {selectedEvent.coordinators.map((coordinator, index) => (
+                    <div
+                      key={index}
+                      className="flex flex-col items-center p-4 rounded-2xl bg-gray-800/50 border border-gray-700"
+                    >
+                      <p className="text-lg font-semibold text-white">{coordinator.name}</p>
+                      <p className={`text-sm ${coordinator.role.includes("Main") ? 'text-yellow-400' : 'text-gray-400'}`}>{coordinator.role}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              {/* End of New Section */}
+
 
               {/* Rules */}
               <div>

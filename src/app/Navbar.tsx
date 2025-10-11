@@ -118,13 +118,7 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          <a
-            href="/register"
-            className="w-64 my-4 py-4 text-2xl font-bold text-white bg-gradient-to-r from-green-500 to-cyan-500 rounded-2xl shadow-lg text-center border border-green-400/30 hover:scale-105 transition-all duration-300"
-            onClick={() => setOpen(false)}
-          >
-            🚀 Register
-          </a>
+
         </div>
       </div>
 
