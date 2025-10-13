@@ -9,6 +9,7 @@ export default function Navbar() {
     { href: "/", label: "Home", icon: "🏠" },
     { href: "/register", label: "Register", icon: "📝" },
     { href: "/events", label: "Events", icon: "🎯" },
+    { href: "https://chat.whatsapp.com/HtvhEyjjsqcFN1neQugxZM?mode=wwc", label: "WhatsApp", icon: "💬", external: true },
   ];
 
   // Scroll detection
