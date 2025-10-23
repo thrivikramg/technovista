@@ -97,7 +97,7 @@ export default function Register() {
               <div className="relative p-6 bg-gray-900/50 rounded-2xl border border-gray-600/50 group-hover:border-blue-400/50 transition-all duration-300">
                 <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <Image
-                  src="/qr-register.png"
+                  src="/qr-register1.png"
                   alt="Registration QR Code"
                   width={220}
                   height={220}
