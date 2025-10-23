@@ -141,10 +141,10 @@ export default function Events() {
         level: "Beginner",
         features: ["Poster Design", "Video Production", "Theme-based"],
         rules: [
-          "Poster: 1-2 members, 3 hours",
+          "Poster: 1-2 members, 3 hours,Theme:Innovation and technology, Sustainability and Environment, Cultural Heritage and Diversity(Choose any 1)",
           "Video: 2-3 members, 3 hours",
-          "Original content only",
-          "Theme provided on spot",
+          "Original content only, Video must be shot on the spot",
+          
           "Bring own materials"
         ],
         // 🌟 Added Co-ordinators from the image for Poster & Video Making
@@ -166,11 +166,13 @@ export default function Events() {
         level: "All Levels",
         features: ["Multiplayer", "Tournament Style", "Live Commentary"],
         rules: [
-          "Solo or teams of 4",
+          "200 Rs per team",
+          "Teams of 4",
           "Fair play required",
           "Knockout format",
           "Schedule adherence",
-          "No cheating allowed"
+          "No cheating allowed",
+          "Maps: Erangel(BGMI),Bermuda(Free Fire)"
         ],
         // 🌟 Placeholder for an event with no coordinators listed in the image
         coordinators: [

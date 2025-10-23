@@ -54,7 +54,7 @@ export default function Register() {
               <h1 className="text-4xl sm:text-6xl md:text-7xl font-black bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent drop-shadow-2xl leading-tight">
                 Register for
                 <span className="block text-3xl sm:text-5xl md:text-6xl bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mt-4">
-                  Technovista 2025
+                  Techno-Vista 2025
                 </span>
               </h1>
             </div>

@@ -152,7 +152,7 @@ export default function Home() {
           <p className="text-sm sm:text-lg md:text-xl text-gray-200 leading-relaxed font-light backdrop-blur-sm bg-white/5 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 border border-white/10">
             Embark on an extraordinary journey at{" "}
             <span className="text-cyan-300 font-semibold bg-gradient-to-r from-cyan-300 to-blue-300 bg-clip-text text-transparent">
-              Technovista 2025
+              Techno-Vista 2025
             </span>
             , where cutting-edge technology meets boundless creativity. Experience 24hrs of
             innovation, competition, and technological marvels that will shape the future.
@@ -302,11 +302,11 @@ export default function Home() {
           </div>
           
           <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4 sm:mb-6 md:mb-8 relative">
-            About Technovista
+            About Techno-Vista
           </h3>
           <div className="w-16 sm:w-20 md:w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-6 sm:mb-8 md:mb-12 rounded-full group-active:w-20 sm:group-active:w-28 transition-all duration-500"></div>
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-200 leading-relaxed font-light max-w-4xl mx-auto relative z-10">
-            <span className="text-cyan-300 font-semibold">Technovista</span> is the flagship technical fest of{" "}
+            <span className="text-cyan-300 font-semibold">Techno-Vista</span> is the flagship technical fest of{" "}
             <span className="text-blue-300 font-medium">Sri Sairam College of Engineering</span>, a premier platform 
             that brings together the brightest minds to showcase innovation, compete in challenging events, 
             and explore the frontiers of technology.
@@ -339,7 +339,7 @@ export default function Home() {
           <div className="flex items-center gap-4 sm:gap-6 md:gap-8">
             <div className="w-8 sm:w-12 md:w-16 h-px bg-gradient-to-r from-transparent to-gray-600 rounded-full"></div>
             <span className="text-gray-300 font-semibold text-sm sm:text-base md:text-lg text-center">
-              © 2025 Technovista | Sri Sairam College of Engineering
+              © 2025 Techno-Vista | Sri Sairam College of Engineering
             </span>
             <div className="w-8 sm:w-12 md:w-16 h-px bg-gradient-to-r from-gray-600 to-transparent rounded-full"></div>
           </div>
