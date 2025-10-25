@@ -72,7 +72,7 @@ export default function Events() {
         ],
         // 🌟 Added Co-ordinators from the image for Debugging
         coordinators: [
-          { name: "Janani B", role: "Coordinator" },
+          { name: "Meghana", role: "Coordinator" },
           { name: "Srinivas", role: "Coordinator" }
         ]
       },
